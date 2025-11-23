@@ -1,6 +1,6 @@
 # AIAgent – Company Research Assistant
 
-> An intelligent agent built with **Next.js**, **TypeScript**, and **Google Gemini** that helps users research companies and generate strategic account plans.
+An intelligent agent built with **Next.js**, **TypeScript**, and **Google Gemini** that helps users research companies and generate strategic account plans.
 
 ---
 
