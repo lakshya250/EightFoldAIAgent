@@ -58,7 +58,7 @@ graph TD
         Agent[Agent (src/lib/agent.ts)]
     end
     subgraph Gemini[Google Gemini API]
-        Gemini
+        GeminiAPI[Gemini API]
     end
     Page --> Chat
     Page --> Plan
@@ -66,7 +66,7 @@ graph TD
     Page -->|fetch| RouteResearch
     RouteChat --> Agent
     RouteResearch --> Agent
-    Agent --> Gemini
+    Agent --> GeminiAPI
 ```
 
 **Key layers**
