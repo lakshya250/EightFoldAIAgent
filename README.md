@@ -42,57 +42,6 @@ npm run dev
 ```
 Open your browser at `http://localhost:3000`.
 
----
-
-## 🏗️ Architecture Overview
-```mermaid
-graph TD
-    subgraph Frontend
-        Page[Page.tsx]
-        Chat[ChatInterface]
-        Plan[AccountPlanViewer]
-    end
-    subgraph Backend
-        RouteChat[/api/chat]
-        RouteResearch[/api/research]
-        Agent[Agent (src/lib/agent.ts)]
-    end
-    subgraph Gemini[Google Gemini API]
-        GeminiAPI[Gemini API]
-    end
-    Page --> Chat
-    Page --> Plan
-    Page -->|fetch| RouteChat
-    Page -->|fetch| RouteResearch
-    RouteChat --> Agent
-    RouteResearch --> Agent
-    Agent --> GeminiAPI
-=======
-  subgraph Frontend
-    Page[Page.tsx]
-    Chat[ChatInterface]
-    Plan[AccountPlanViewer]
-  end
-
-  subgraph Backend
-    RouteChat[/api/chat]
-    RouteResearch[/api/research]
-    Agent[Agent (src/lib/agent.ts)]
-  end
-
-  subgraph Gemini[Google Gemini API]
-    Gemini
-  end
-
-  %% Define the flow/architecture links
-  Chat --> RouteChat
-  Chat --> RouteResearch
-  RouteChat --> Agent
-  RouteResearch --> Agent
-  Agent --> Gemini
-  Gemini --> Agent
->>>>>>> 5140b3488a17ca4c50f8f489e8141346f7027403
-```
 
 **Key layers**
 - **UI Layer** – Next.js app router (`src/app/*`) renders the split‑screen UI (chat on the left, plan on the right).
