@@ -52,13 +52,13 @@ graph TD
     Chat[ChatInterface]
     Plan[AccountPlanViewer]
   end
-  
+
   subgraph Backend
     RouteChat[/api/chat]
     RouteResearch[/api/research]
     Agent[Agent (src/lib/agent.ts)]
   end
-  
+
   subgraph Gemini[Google Gemini API]
     Gemini
   end
