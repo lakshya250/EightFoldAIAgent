@@ -47,6 +47,7 @@ Open your browser at `http://localhost:3000`.
 ## 🏗️ Architecture Overview
 ```mermaid
 graph TD
+<<<<<<< HEAD
     subgraph Frontend
         Page[Page.tsx]
         Chat[ChatInterface]
@@ -67,6 +68,31 @@ graph TD
     RouteChat --> Agent
     RouteResearch --> Agent
     Agent --> GeminiAPI
+=======
+  subgraph Frontend
+    Page[Page.tsx]
+    Chat[ChatInterface]
+    Plan[AccountPlanViewer]
+  end
+
+  subgraph Backend
+    RouteChat[/api/chat]
+    RouteResearch[/api/research]
+    Agent[Agent (src/lib/agent.ts)]
+  end
+
+  subgraph Gemini[Google Gemini API]
+    Gemini
+  end
+
+  %% Define the flow/architecture links
+  Chat --> RouteChat
+  Chat --> RouteResearch
+  RouteChat --> Agent
+  RouteResearch --> Agent
+  Agent --> Gemini
+  Gemini --> Agent
+>>>>>>> 5140b3488a17ca4c50f8f489e8141346f7027403
 ```
 
 **Key layers**
