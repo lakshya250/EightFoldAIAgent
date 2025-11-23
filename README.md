@@ -47,7 +47,6 @@ Open your browser at `http://localhost:3000`.
 ## 🏗️ Architecture Overview
 ```mermaid
 graph TD
-<<<<<<< HEAD
     subgraph Frontend
         Page[Page.tsx]
         Chat[ChatInterface]
