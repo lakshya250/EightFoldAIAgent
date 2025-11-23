@@ -52,21 +52,24 @@ graph TD
         Chat[ChatInterface]
         Plan[AccountPlanViewer]
     end
+    
     subgraph Backend
         RouteChat[/api/chat]
         RouteResearch[/api/research]
         Agent[Agent (src/lib/agent.ts)]
     end
+    
     subgraph Gemini[Google Gemini API]
         Gemini
     end
-    Page --> Chat
-    Page --> Plan
-    Page -->|fetch| RouteChat
-    Page -->|fetch| RouteResearch
+
+    %% Define the flow/architecture links
+    Chat --> RouteChat
+    Chat --> RouteResearch
     RouteChat --> Agent
     RouteResearch --> Agent
     Agent --> Gemini
+    Gemini --> Agent
 ```
 
 **Key layers**
