@@ -4,7 +4,7 @@ An intelligent agent built with **Next.js**, **TypeScript**, and **Google Gemini
 
 ---
 
-## 📦 Table of Contents
+## Table of Contents
 - [Getting Started](#getting-started)
 - [Architecture Overview](#architecture-overview)
 - [Design Decisions](#design-decisions)
@@ -14,7 +14,7 @@ An intelligent agent built with **Next.js**, **TypeScript**, and **Google Gemini
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 ### Prerequisites
 - **Node.js** (v20 or later) and **npm**
 - A **Google Gemini API key** (free tier works fine)
@@ -51,7 +51,7 @@ Open your browser at `http://localhost:3000`.
 
 ---
 
-## 🛠️ Design Decisions
+##  Design Decisions
 | Area | Decision | Rationale |
 |------|----------|-----------|
 | **Framework** | Next.js (App Router) | Provides server‑side rendering, API routes, and built‑in CSS support without extra boilerplate. |
@@ -66,7 +66,7 @@ Open your browser at `http://localhost:3000`.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 ```
 AIAgent/
 ├─ .gitignore          # ignores node_modules, .env*, build folders
@@ -93,7 +93,7 @@ AIAgent/
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 1. Fork the repository.
 2. Create a feature branch (`git checkout -b feature/awesome-feature`).
 3. Install dependencies and run the dev server.
